@@ -5,27 +5,27 @@
 		<title>DELCORP_ERP >
 			{% block title %}{% endblock %}
 		</title>
+		
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-		<link
-		rel="icon" href="favicon.ico" type="image/x-icon">
-		<!-- Favicon-->
-		<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
-		<link rel="stylesheet" href="{{asset('plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
-		<link rel="stylesheet" href="{{asset('plugins/charts-c3/plugin.css')}}"/>
+		<link rel="icon" href="{{ asset('images/Logo_DELCORP_carre.ico') }}" type="image/x-icon">
 
-		<link
-		rel="stylesheet" href="{{asset('plugins/morrisjs/morris.min.css')}}"/>
+		<!-- Favicon-->
+		<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{ asset('plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
+		<link rel="stylesheet" href="{{ asset('plugins/charts-c3/plugin.css')}}"/>
+		<link rel="stylesheet" href="{{ asset('plugins/morrisjs/morris.min.css')}}"/>
+
 		<!-- Custom Css -->
-		<link rel="stylesheet" href="{{asset('css/style.min.css')}}">
+		<link rel="stylesheet" href="{{ asset('css/style.min.css')}}">
 	</head>
 
 	<body class="theme-blush">
 
 		<div class="page-loader-wrapper">
 			<div class="loader">
-				<div class="m-t-30"><img class="zmdi-hc-spin" src="{{asset('images/loader.svg')}}" width="48" height="48" alt="Aero"></div>
+				<div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('images/Logo_DELCORP_carre.png' )}}" width="100" height="100" alt="Aero"></div>
 				<p>Chargement en Cours...</p>
 			</div>
 		</div>
@@ -47,22 +47,22 @@
 				<button class="btn-menu ls-toggle-btn" type="button">
 					<i class="zmdi zmdi-menu"></i>
 				</button>
-				<a href="index.html"><img src="{{asset('images/logo.svg')}}" width="25" alt="Aero"><span class="m-l-10">Aero</span>
+				<a href="index.html"><span class="m-l-10">NOM SOCIETE</span>
 				</a>
 			</div>
 			<div class="menu">
 				<ul class="list">
 					<li>
 						<div class="user-info">
-							<a class="image" href="#"><img src="{{ asset('images/profile_av.jpg') }}" alt="User"></a>
+							<a class="image" href="#"><img src="{{ asset('images/Logo_DELCORP_carre.png' )}}" alt="User"></a>
 							<div class="detail">
-								<h4>Prenom Utilisateur</h4>
-								<small>Nom utilisateur</small>
+								<h4>Jonathan</h4>
+								<small>DELANNOY</small>
 							</div>
 						</div>
 					</li>
 					<li class="active open">
-						<a href="index.html">
+						<a href="{{ path("dashboard") }}">
 							<i class="zmdi zmdi-home"></i>
 							<span>Accueil</span>
 						</a>
@@ -79,7 +79,7 @@
 							</a>
 							<ul class="ml-menu">
 								<li>
-									<a href="">Fiche Clients</a>
+									<a href="{{ path("clients") }}">Fiche Clients</a>
 								</li>
 							</ul>
 
