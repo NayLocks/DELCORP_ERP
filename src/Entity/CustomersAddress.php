@@ -43,6 +43,16 @@ class CustomersAddress
      */
     private $customerCode;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $socialReason;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $callName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +114,30 @@ class CustomersAddress
     public function setCustomerCode(?Customers $customerCode): self
     {
         $this->customerCode = $customerCode;
+
+        return $this;
+    }
+
+    public function getSocialReason(): ?string
+    {
+        return $this->socialReason;
+    }
+
+    public function setSocialReason(?string $socialReason): self
+    {
+        $this->socialReason = $socialReason;
+
+        return $this;
+    }
+
+    public function getCallName(): ?string
+    {
+        return $this->callName;
+    }
+
+    public function setCallName(?string $callName): self
+    {
+        $this->callName = $callName;
 
         return $this;
     }

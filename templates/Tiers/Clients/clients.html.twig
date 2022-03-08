@@ -14,19 +14,16 @@
 					<li class="breadcrumb-item">
 						<a href="index.html">
 							<i class="zmdi zmdi-home"></i>
-							Aero</a>
+							TEST</a>
 					</li>
-					<li class="breadcrumb-item active">
-						Clients
+					<li class="breadcrumb-item">
+						<a href="{{ path("clients") }}">
+							<i class="zmdi ti-user"></i>
+							Clients</a>
 					</li>
 				</ul>
 				<button class="btn btn-primary btn-icon mobile_menu" type="button">
 					<i class="zmdi zmdi-sort-amount-desc"></i>
-				</button>
-			</div>
-			<div class="col-lg-5 col-md-6 col-sm-12">
-				<button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button">
-					<i class="zmdi zmdi-arrow-right"></i>
 				</button>
 			</div>
 		</div>
@@ -41,28 +38,29 @@
 							<thead>
 								<tr>
 									<th>Code Client</th>
-									<th>Nom Client / Nom d'Appel</th>
+									<th>Nom Client</th>
 									<th>Adresse</th>
 									<th>Boîte Postale</th>
 									<th>Code Postal</th>
 									<th>Ville</th>
 									<th>Créé Le</th>
+									<th>Actions</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% for client in clients %}
 									<tr>
 										<td>{{ client.customerCode }}</td>
-										<td> {{ client.socialReason }}<br>
-											<small>{{ client.callName }}</small>
+										<td> {{ client.callName }}<br>
+											<small>{{ client.socialReason }}</small>
 										</td>
 										<td>{{ client.address }}</td>
 										<td>{{ client.postBox }}</td>
 										<td>{{ client.zipCode }}</td>
 										<td>{{ client.city }}</td>
-										<td>25/01/2019</td>
+										<td>{{ client.createdDate|date('d/m/Y') }}</td>
 										<td>
-											<a href="{{ path("client_details", { 'customerCode': client.customerCode }) }}">res</a>
+											<a class="btn btn-primary" href="{{ path("client_details", { 'customerCode': client.customerCode }) }}">Voir la Fiche</a>
 										</td>
 									</tr>
 								{% endfor %}
