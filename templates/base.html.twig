@@ -8,14 +8,12 @@
 		
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-		<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 		<link rel="icon" href="{{ asset('images/Logo_DELCORP_carre.ico') }}" type="image/x-icon">
 
-		<!-- Favicon-->
-		<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css')}}">
-		<link rel="stylesheet" href="{{ asset('plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
-		<link rel="stylesheet" href="{{ asset('plugins/charts-c3/plugin.css')}}"/>
-		<link rel="stylesheet" href="{{ asset('plugins/morrisjs/morris.min.css')}}"/>
+		<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('plugins/charts-c3/plugin.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('plugins/morrisjs/morris.min.css') }}"/>
 
 		<!-- Custom Css -->
 		<link rel="stylesheet" href="{{ asset('css/style.min.css')}}">
@@ -33,13 +31,13 @@
 		{# <div class="overlay"></div> #}
 
 		<!-- Main Search -->
-		<div id="search">
+		{# <div id="search">
 			<button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
 			<form>
 				<input type="search" value="" placeholder="Search..."/>
 				<button type="submit" class="btn btn-primary">Search</button>
 			</form>
-		</div>
+		</div> #}
 
 		<!-- Left Sidebar -->
 		<aside id="leftsidebar" class="sidebar">
@@ -106,14 +104,14 @@
 
 
 		<!-- Jquery Core Js -->
-		<script src="{{asset('bundles/libscripts.bundle.js')}}"></script>
-		<script src="{{asset('bundles/vendorscripts.bundle.js')}}"></script>
+		<script src="{{ asset('bundles/libscripts.bundle.js') }}"></script>
+		<script src="{{ asset('bundles/vendorscripts.bundle.js') }}"></script>
 
-		<script src="{{asset('bundles/jvectormap.bundle.js')}}"></script>
-		<script src="{{asset('bundles/sparkline.bundle.js')}}"></script>
-		<script src="{{asset('bundles/c3.bundle.js')}}"></script>
+		<script src="{{ asset('bundles/jvectormap.bundle.js') }}"></script>
+		<script src="{{ asset('bundles/sparkline.bundle.js') }}"></script>
+		<script src="{ {asset('bundles/c3.bundle.js')}}"></script>
 
-		<script src="{{asset('bundles/mainscripts.bundle.js')}}"></script>
-		<script src="{{asset('js/pages/index.js')}}"></script>
+		<script src="{ {asset('bundles/mainscripts.bundle.js') }}"></script>
+		<script src="{{ asset('js/pages/index.js') }}"></script>
 	</body>
 </html>
