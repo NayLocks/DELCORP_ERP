@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/", name="dashboard")
+     * @Route("/", name="menu")
      */
     public function index()
     {
-        return $this->render('dashboard.html.twig');
+        return $this->render('base.html.twig');
     }
 }
 
